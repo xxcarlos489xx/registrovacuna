@@ -1,0 +1,291 @@
+html{
+    height: auto;
+    min-height: 100%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.login-page{
+    background: #d2d6de;
+}
+
+.caja-login{
+    text-align: center;
+    margin-top:50px;
+}
+
+.section-formulario{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 20px 0px;
+    background-color: lightgrey;
+}
+.items-form{
+    border: solid;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+}
+.btn{
+    width: 25%;
+    height: 35px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: red;
+    background-color: darkcyan;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.5;
+}
+.restringed{
+    text-align: center;
+    background-color: indianred;
+    color: white;
+    padding: 15px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 20px 0px;
+}
+
+/*Estilos Generales*/
+.button {
+    background:#7f8c8d;
+    color:#fff;
+    display:inline-block;
+    font-size:1.25em;
+    margin:20px;
+    padding:10px 0;
+    text-align:center;
+    width:200px;
+    text-decoration:none;
+    box-shadow:0px 3px 0px #373c3c;
+}
+
+.button span {
+    margin-right:10px;
+}
+
+/*Colores*/
+.button.blue {
+    background:#3498db;
+    box-shadow:0px 3px 0px #266792;
+}
+
+.button.close {
+    background:darkred;
+    box-shadow:0px 3px 0px darkgoldenrod;
+}
+
+.button.yellow {
+    background:#e67e22;
+    box-shadow:0px 3px 0px #b55704;
+}
+
+
+/*Tamaños*/
+.button.medium {
+    width:230px;
+}
+
+
+.button.large {
+    width:450px;
+}
+
+
+.button.radius {
+    border-radius:50px;
+}
+
+/*Efectos, Hover*/
+.button:hover {
+    box-shadow:0px 0px 0px;
+    padding-top:7px;
+}
+
+.text-center{
+    text-align:center;
+}
+button{
+    border: 0;
+    cursor:pointer;
+}
+button:hover{
+    background-color:darkred;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px 20px; 
+}
+
+.pagr{
+    text-align: center;
+}
+
+.relleno{
+    text-align:left;
+}
+
+.imgrelleno{
+    width: 30%;
+    padding: 20px 700px 0px 0px;
+}
+
+#tablitas {
+    padding: 20px;
+}
+
+#tablitas table tr {
+    background: #ccc;
+
+}
+#tablitas table tr:nth-child(even){
+    background-color: #efefef;
+}
+#tablitas table tr:nth-child(odd){
+    background-color: #928681;
+}
+
+#tablitas table tr>* {
+    padding: 3px 10px;
+    border-bottom: 1px solid #666;
+    
+}
+
+.subcontenido {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.subcontenido .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.subcontenido .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subcontenido .card img {
+    width: 330px;
+    height: 220px;
+}
+
+.subcontenido .card h4 {
+    font-weight: 600;
+}
+
+.subcontenido .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.subcontenido .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db ;
+}
+
+.box-registro{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: darkgray;
+    border-radius: 10px;
+    color: white;
+}
+.container-close{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+.container-registro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+.select-vacunas{
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px;
+    text-align: center;
+}
+.form-vacunas{
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px;
+}
+.dosis{
+    width: 60px;
+}
+form{
+    width: 100%;
+}
+.w-100{
+    width: 100%;
+}
+.form-group{
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+.success {
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 20px 0px;
+}
+/*=========================================
+            RESPONSIVE
+===========================================*/
+@media (max-width: 768px){
+    .container{
+        align-items: center;
+        flex-direction: column;
+    }
+    .box img{
+        width: 55%;
+    }
+}
