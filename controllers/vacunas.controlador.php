@@ -65,15 +65,16 @@ class ControladorVacunas{
                 if ($insert == 'ok') {
                     echo    '<div class="success">
                                 Registro  creado con éxito
-                            </div>
-                            <script>
-                                location.reload();
-                            </script>
-                            ';
+                            </div>';
                     return;
                 }
                 
             }
         }
+    }
+    public static function ctrMisVacunas($id){
+        $tabla = 'usuario_vacunas';
+        $respuesta = ModeloVacunas::misVacunas($tabla,$id);
+        return $respuesta;
     }
 }

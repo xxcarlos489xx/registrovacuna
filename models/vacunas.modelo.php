@@ -4,7 +4,7 @@ require_once 'conexion.php';
 class ModeloVacunas{
     public static function mostrarVacunas($tabla,$siglas=null){
         if (!$siglas) {
-            $consulta = Conexion::conectar()->prepare("SELECT id,nombre,siglas FROM $tabla ORDER BY nombre ASC");
+            $consulta = Conexion::conectar()->prepare("SELECT id,nombre,siglas,detalle FROM $tabla ORDER BY nombre ASC");
             $consulta->execute();
             return $consulta->fetchAll();
         }else{
@@ -45,6 +45,19 @@ class ModeloVacunas{
 
             $consulta->execute();
             return $consulta->fetchObject();
+
+    }
+    public static function misVacunas($tabla,$usuario_id){
+        $consulta = Conexion::conectar()->prepare("SELECT   uv.*,
+                                                            u.nom_completos, u.nro_documento, 
+                                                            v.nombre AS nombrevacuna ,v.dosis AS dosistotal, v.siglas
+                                                    FROM $tabla AS uv
+                                                    INNER JOIN usuarios AS u ON uv.usuario_id = u.id 
+                                                    INNER JOIN vacunas AS v ON uv.vacuna_id = v.id 
+                                                    WHERE usuario_id = :usuario_id ");
+            $consulta -> bindParam(":usuario_id", $usuario_id, PDO::PARAM_INT);
+            $consulta->execute();
+            return $consulta->fetchAll();
 
     }
 }

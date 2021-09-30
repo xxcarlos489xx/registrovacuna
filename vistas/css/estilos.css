@@ -277,6 +277,9 @@ form{
     margin-right: 5vw;
     padding: 20px 0px;
 }
+.card-info:hover{
+    display:none;
+}
 /*=========================================
             RESPONSIVE
 ===========================================*/

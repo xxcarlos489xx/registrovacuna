@@ -1,29 +1,31 @@
 <?php 
+	$ruta=Ruta::ctrRuta();
+	$misvacunas=ControladorVacunas::ctrMisVacunas($_SESSION['id']);
+?>
 
-$ruta=Ruta::ctrRuta();
- ?>
-
-<img width="20%" src="vistas/imagenes/imagen1.jpg">
+<?php 
+	echo 	'<fieldset>
+				<legend>Datos de usuario</legend>
+				<h3><strong>Nombres: </strong> '.$_SESSION["nom_completos"].'</h3>
+				<h3><strong>Dni: </strong> '.$_SESSION["nro_documento"].'</h3>
+			</fieldset> <br><br>';
+		if(count($misvacunas)>0){
+			foreach($misvacunas as $v){
+				$falta = intval($v["dosistotal"]) - intval($v["dosis"]);
+				echo '	<fieldset>
+							<h4>Nro. dosis actual: '.$v["dosis"].'</h4>
+							<h4>Por completar: '.$falta.'</h4>
+							<h4>Nombre de vacuna: '.$v["nombrevacuna"].'</h4>
+							<h4>Siglas: '.$v["siglas"].'</h4>
+							<h4>Nro. dosis recomendado: '.$v["dosistotal"].'</h4>
+							
+						</fieldset>';
+			}
+		}else{
+			echo '<div class="restringed">
+				Aun no tiene vacunas registradas
+			</div>';
+		}
+		
 	
-	<fieldset>
-			<legend>Carnet de vacunacion</legend>
-
-			<h4>MANUEL ANDRES HURTADO ARELLANO</h4>
-			<h5><strong>Fec. Nac: </strong>02/09/1983</h5>
-			<h5><strong>Edad: </strong> 38 año(s) 0 mes(es) 22 día(s) </h5>
-			<h5><strong>Direccion: </strong>Av. Dominicos 2700, LIMA/LIMA/SAN MARTIN DE PORRES </h5><br><br>
-	</fieldset>
-
-	<fieldset>
-			<h4>Vacunas aplicadas: 1</h4>
-			<h5>1 dosis:</h5>
-			<h4>Martes 07 de Sep. 2021</h4>
-			<h4>LIMA NORTE - Parque de las Leyendas - LIMA LIMA SAN MIGUEL</h4>
-	</fieldset>
-
-	<div class="box" >
-            <a href=" <?php echo $ruta?>inicio" class="button blue medium radius">
-                <span class="icon-house"></span>MENU
-
-            </a>
-    </div>
+?>

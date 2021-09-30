@@ -14,6 +14,7 @@ class ControladorAcceso{
                     $_SESSION["validarSesion"] = "ok";
                     $_SESSION["id"] = $respuesta["id"];
                     $_SESSION["nombre"] = $respuesta["nombre"];
+                    $_SESSION["nom_completos"] = $respuesta["nom_completos"];
                     $_SESSION["foto"] = $respuesta["foto"];
                     $_SESSION["nro_documento"] = $respuesta["nro_documento"];
                     $_SESSION["perfil"] = $respuesta["perfil"];

@@ -1,6 +1,5 @@
 <?php 
-
-$ruta=Ruta::ctrRuta();
+    $ruta=Ruta::ctrRuta();
  ?>
 <div class="container">
     <div class="box" >
@@ -21,7 +20,7 @@ $ruta=Ruta::ctrRuta();
     <div class="box" >
         <img width="20%" src="vistas/imagenes/imagen6.png"><br>
         <a href="<?php echo $ruta?>mispruebas" class="button blue medium radius">
-            <span class="icon-house"></span>Mis pruebas
+            <span class="icon-house"></span>Información <br> de vacunas
 
         </a>
     </div>
