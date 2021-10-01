@@ -27,7 +27,7 @@
     <div class="box">
         <img width="20%" src="vistas/imagenes/imagen5.png"><br>
         <a href="<?php echo $ruta?>mimedicacion" class="button yellow medium radius">
-            <span class="icon-warning"></span>Mi medicacion
+            <span class="icon-warning"></span>Mi medicación
         </a>
     </div>    
 </div>

@@ -23,6 +23,12 @@ class ControladorVacunas{
             //CREAR NUEVO REGISTRO
             if ($exist) {
                 $dosis_correcta = ($exist->dosis)+1;
+                if(intval($dosis) > intval($vacuna->dosis)){
+                    echo    '<div class="restringed">
+                                Ya tiene todas las dosis completas para esta vacuna.
+                            </div>';
+                    return;
+                }
                 if (intval($exist->dosis)>=$dosis || intval($dosis_correcta) != $dosis) {
                     echo    '<div class="restringed">
                                 La dosis correcta que le toca es la número '.$dosis_correcta.', por favor seleccione la correcta y vuelva a intentarlo.
